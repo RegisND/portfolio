@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 1000px;
+        min-height: 1000px;
+        margin: 50px;
+        background: #fff;
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Coluna Esquerda menor, Direita maior */
+        box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+
+        /* =========================================
+           LADO ESQUERDO (AZUL)
+           ========================================= */
+        .left-side {
+            position: relative;
+            background: #003147;
+            padding: 40px;
+
+            .profile-text {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+                .imgBx {
+                    position: relative;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-bottom: 15px;
+
+                    > img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                > h2 {
+                    color: #fff;
+                    font-size: 1.2em;
+                    margin-top: 10px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-weight: 600;
+                    line-height: 1.4em;
+
+                    > span {
+                        font-size: 0.8em;
+                        font-weight: 300;
+                        opacity: 0.8;
+                    }
+                }
+            }
+
+            .contact-info {
+                padding-top: 40px;
+
+                .title {
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    margin-bottom: 20px;
+                }
+
+                > ul {
+                    position: relative;
+
+                    > li {
+                        position: relative;
+                        list-style: none;
+                        margin: 10px 0px;
+                        cursor: pointer;
+                        display: flex;
+
+                        .icon {
+                            display: inline-block;
+                            width: 30px;
+                            font-size: 18px;
+                            color: #03a9f4;
+                        }
+
+                        .text {
+                            color: #fff;
+                            font-size: 14px;
+                            font-weight: 300;
+                        }
+                    }
+                }
+
+                /* Educação */
+                &.education li {
+                    display: block;
+                    margin-bottom: 25px;
+
+                    > h5 {
+                        color: #03a9f4;
+                        font-weight: 500;
+                        margin-bottom: 5px;
+                    }
+
+                    > h4 {
+                        color: #fff;
+                        font-weight: 300;
+                        font-size: 13.5px;
+
+                        &:nth-child(2) {
+                            color: #fff;
+                            font-weight: 500;
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                /* Idiomas */
+                &.language {
+                    .percent {
+                        position: relative;
+                        width: 100%;
+                        height: 6px;
+                        background: #081921;
+                        display: block;
+                        margin-top: 5px;
+                        border-radius: 5px;
+
+                        > div {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            height: 100%;
+                            background: #03a9f4;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* =========================================
+           LADO DIREITO (BRANCO)
+           ========================================= */
+        .right-side {
+            position: relative;
+            background: #fff;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+
+            .about {
+                margin-bottom: 50px;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                    margin-top: auto;
+                }
+
+                .title2 {
+                    color: #003147;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-bottom: 10px;
+                    font-weight: 700;
+                }
+
+                /* Experiências */
+                .box {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 25px 0px;
+
+                    .year-company {
+                        min-width: 150px;
+                        padding-right: 10px;
+
+                        > h5 {
+                            text-transform: uppercase;
+                            color: #848c90;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .text {
+                        > h4 {
+                            text-transform: uppercase;
+                            color: #2a7da2;
+                            font-size: 16px;
+                            margin-bottom: 8px;
+                        }
+
+                        > p {
+                            color: #333;
+                            font-size: 14px;
+                            line-height: 1.6em;
+                            margin-bottom: 10px;
+                            text-align: justify;
+                        }
+                        
+                        ul li {
+                            font-size: 13.5px;
+                            margin-bottom: 5px;
+                            line-height: 1.5em;
+                            color: #444;
+                        }
+                    }
+                }
+
+                /* --- TECH STACK (GRID CORRIGIDO 4 COLUNAS) --- */
+                &.skills .skills-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
+                    gap: 15px;
+                    margin-top: 15px;
+                }
+
+                &.skills .skill-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px;
+                    border-radius: 8px;
+                    background: #f0f0f0; /* Cinza claro inicial */
+                    border: 1px solid #ddd;
+                    transition: all 0.3s ease-in-out;
+                    cursor: default;
+
+                    /* Ícone Original (Azul Escuro) */
+                    i {
+                        font-size: 40px;
+                        color: #003147; 
+                        margin-bottom: 8px;
+                        transition: color 0.3s;
+                    }
+
+                    /* Texto Original (Cinza Escuro) */
+                    span {
+                        font-size: 13px;
+                        color: #333;
+                        font-weight: 500;
+                        transition: color 0.3s;
+                    }
+
+                    /* --- EFEITO HOVER (CORRIGIDO) --- */
+                    &:hover {
+                        background: #003147; /* Fundo vira Azul Escuro */
+                        transform: translateY(-5px);
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                        border-color: #003147;
+                    }
+
+                    /* Seleciona o ícone e o texto DENTRO do item quando passa o mouse no item */
+                    &:hover i {
+                        color: #fff !important; /* Ícone vira Branco */
+                    }
+
+                    &:hover span {
+                        color: #fff !important; /* Texto vira Branco */
+                    }
+                }
+
+                /* --- INTERESSES (GRID CORRIGIDO 4 COLUNAS) --- */
+                &.interest ul {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
+                    gap: 15px;
+                    margin-top: 20px;
+                    padding: 0;
+
+                    > li {
+                        list-style: none;
+                        color: #333;
+                        font-weight: 500;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px; /* Espaço entre ícone e texto */
+
+                        .fa {
+                            color: #03a9f4;
+                            font-size: 18px;
+                            width: 20px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================= */
+@media (max-width: 1000px) {
+    body .container {
+        margin: 10px;
+        height: auto;
+        grid-template-columns: 1fr; /* Vira 1 coluna no celular/tablet vertical */
+    }
+
+    body .container .right-side {
+        padding: 20px;
+    }
+    
+    /* No celular, mantemos 2 colunas para não ficar muito espremido */
+    body .container .right-side .about.skills .skills-grid,
+    body .container .right-side .about.interest ul {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* =========================================
+   IMPRESSÃO
+   ========================================= */
+@media print {
+    body {
+        background: none;
+    }
+    body .container {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Garante que o grid se mantenha na impressão */
+    body .container .right-side .about.skills .skills-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        display: grid !important;
+    }
+}
+
+/* --- BOTÃO DE IDIOMA FLUTUANTE --- */
+.lang-btn-float {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #003147;
+    color: #fff;
+    border: 2px solid #03a9f4;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    z-index: 1000; /* Garante que fique acima de tudo */
+}
+
+.lang-btn-float:hover {
+    background: #03a9f4;
+    color: #003147;
+    transform: scale(1.05);
+}
+
+/* ESCONDER O BOTÃO NA IMPRESSÃO */
+@media print {
+    .lang-btn-float {
+        display: none !important;
+    }
+}
