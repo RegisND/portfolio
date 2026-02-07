@@ -48,7 +48,7 @@
         <div class="home-sci">
             <a href="https://www.linkedin.com/in/reginaldo-neves-dias-00ba43249/" target="_blank"><i class='bx bxl-linkedin'></i></a>
             <a href="https://github.com/RegisND" target="_blank"><i class='bx bxl-github' ></i></a>
-            <a href="#"><i class='bx bxl-whatsapp' ></i></a>
+            <a href="https://wa.me/5511994867514?text=Olá,%20Reginaldo!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank"><i class='bx bxl-whatsapp' ></i></a>
         </div>
     </section>
 
@@ -185,16 +185,16 @@
 
     <section id="contact" class="contact">
         <h2 class="heading" data-lang="contact_heading">Fale <span>Comigo!</span></h2>
-        <form action="#">
+        <form id="contactForm">
             <div class="input-box">
-                <input type="text" placeholder="Nome Completo" data-lang-ph="ph_name">
-                <input type="email" placeholder="Email" data-lang-ph="ph_email">
+                <input type="text" name="nome" placeholder="Nome Completo" data-lang-ph="ph_name">
+                <input type="email" name="email" placeholder="Email" data-lang-ph="ph_email">
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Telefone" data-lang-ph="ph_phone">
-                <input type="text" placeholder="Assunto" data-lang-ph="ph_subject">
+                <input type="number" name="telefone" placeholder="Telefone" data-lang-ph="ph_phone">
+                <input type="text" name="assunto" placeholder="Assunto" data-lang-ph="ph_subject">
             </div>
-            <textarea cols="30" rows="10" placeholder="Sua Mensagem" data-lang-ph="ph_msg"></textarea>
+            <textarea name="mensagem" cols="30" rows="10" placeholder="Sua Mensagem" data-lang-ph="ph_msg"></textarea>
             <div class="btn-box btns">
                 <button type="submit" class="btn" data-lang="btn_send">Enviar Mensagem</button>
             </div>
@@ -203,5 +203,6 @@
 
     <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/mensagem.js"></script>
 </body>
 </html>
