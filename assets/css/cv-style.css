@@ -48,6 +48,7 @@ body {
                     border-radius: 50%;
                     overflow: hidden;
                     margin-bottom: 15px;
+                    background: #fff;
 
                     > img {
                         position: absolute;
