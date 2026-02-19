@@ -313,23 +313,57 @@ body {
 }
 
 /* =========================================
-   RESPONSIVIDADE (MOBILE)
+   RESPONSIVIDADE (MOBILE) - AJUSTE DE HIERARQUIA
    ========================================= */
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
+    /* Forçamos o body e container a aceitarem o novo layout */
     body .container {
-        margin: 10px;
-        height: auto;
-        grid-template-columns: 1fr; /* Vira 1 coluna no celular/tablet vertical */
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    body .container .left-side {
+        width: 100% !important;
+        padding: 30px 20px !important;
     }
 
     body .container .right-side {
-        padding: 20px;
+        width: 100% !important;
+        padding: 20px !important;
     }
-    
-    /* No celular, mantemos 2 colunas para não ficar muito espremido */
+
+    /* O PONTO CHAVE: Ajustando as caixas de experiência */
+    /* Usamos o caminho completo para garantir que o CSS aplique */
+    body .container .right-side .about .box {
+        flex-direction: column !important; 
+        display: flex !important;
+        margin-bottom: 25px !important;
+    }
+
+    body .container .right-side .about .box .year-company {
+        width: 100% !important;
+        min-width: 100% !important;
+        margin-bottom: 5px !important;
+        padding-right: 0 !important;
+    }
+
+    body .container .right-side .about .box .text {
+        width: 100% !important;
+    }
+
+    /* Ajuste do Grid de Skills */
     body .container .right-side .about.skills .skills-grid,
     body .container .right-side .about.interest ul {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    /* Ajuste da imagem para não ficar gigante no mobile */
+    body .container .left-side .profile-text .imgBx {
+        width: 150px !important;
+        height: 150px !important;
     }
 }
 
