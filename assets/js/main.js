@@ -7,6 +7,28 @@ VanillaTilt.init(document.querySelector(".card"), {
 });
 
 /* =========================================
+   LÓGICA DO MENU HAMBURGUER (MOBILE)
+   ========================================= */
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+let body = document.querySelector('body');
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+    body.classList.toggle('menu-open'); // Adiciona classe para empurrar o conteúdo
+};
+
+// Fecha o menu ao clicar em qualquer link
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.onclick = () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+        body.classList.remove('menu-open');
+    }
+});
+
+/* =========================================
    SISTEMA DE TRADUÇÃO (PT <-> EN)
    ========================================= */
 const translations = {
@@ -17,12 +39,13 @@ const translations = {
         "nav_portfolio": "Projetos",
         "nav_contact": "Contato",
         "hero_title": "Olá, eu sou <span>Reginaldo Dias</span>",
-        "hero_desc": "Transformo problemas complexos em soluções automatizadas e interfaces intuitivas. Especialista em Python, Automação e Desenvolvimento Web.",
+        "text-animate": "Suporte Técnico | Automação",
+        "hero_desc": "Oficial Administrativo em transição para a área técnica. Aplico Python, IA e Automação para otimizar fluxos de trabalho e gestão de dados.",
         "btn_cv": "Currículo",
         "btn_talk": "Fale Comigo",
         "about_heading": "Sobre <span>Mim</span>",
         "about_sub": "Desenvolvedor & Automatizador",
-        "about_text": "Minha jornada começou na administração pública, onde percebi que a tecnologia poderia revolucionar a produtividade. Hoje, combino minha lógica de negócios com Python, Java e Web Development para criar softwares que economizam tempo e geram valor.",
+        "about_text": "Atualmente no 4º semestre de ADS, utilizo minha experiência em processos públicos para desenvolver ferramentas que automatizam tarefas repetitivas e aumentam a precisão na análise de dados.",
         "btn_projects": "Ver Projetos",
         "services_heading": "Meus <span>Serviços</span>",
         "serv_1_title": "Desenvolvimento Web",
@@ -54,12 +77,13 @@ const translations = {
         "nav_portfolio": "Projects",
         "nav_contact": "Contact",
         "hero_title": "Hi, I'm <span>Reginaldo Dias</span>",
-        "hero_desc": "I turn complex problems into automated solutions and intuitive interfaces. Specialist in Python Automation and Web Development.",
+        "text-animate": "Technical Support | Automation",
+        "hero_desc": "Administrative Officer transitioning into the technical field. I apply Python, AI, and Automation to optimize workflows and data management.",
         "btn_cv": "Resume",
         "btn_talk": "Let's Talk",
         "about_heading": "About <span>Me</span>",
         "about_sub": "Developer & Automator",
-        "about_text": "My journey started in public administration, realizing technology could revolutionize productivity. Today, I combine business logic with Python, Java, and Web Development to create software that saves time and creates value.",
+        "about_text": "Currently in the 4th semester of Systems Analysis and Development (ADS), I leverage my experience in public sector processes to develop tools that automate repetitive tasks and increase accuracy in data analysis.",
         "btn_projects": "See Projects",
         "services_heading": "My <span>Services</span>",
         "serv_1_title": "Web Development",
