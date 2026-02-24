@@ -40,7 +40,7 @@ section {
 /* --- TÍTULOS GLOBAIS --- */
 .heading {
     font-size: 4rem; 
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -115,6 +115,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* padding: 0 9%; */
 }
 
 /* Círculo de Fundo */
@@ -147,7 +148,7 @@ section {
 }
 
 .home-content h1 {
-    font-size: 4.2rem; 
+    font-size: 4rem; 
     font-weight: 700;
     line-height: 1.3;
 }
@@ -297,15 +298,16 @@ section {
 
 /* Card da Foto Home */
 .home-img {
-    width: 410px; 
+    width: 410px;
+    height: 450px;
 }
 
 .home-img .card {
     position: relative;
     width: 100%;
-    height: 450px;
+    height: 100%;
     background-color: var(--main-color3);
-    border-radius: 5%;
+    border-radius: 3%;
     border-right: 1px solid var(--main-color1);
     border-bottom: 1px solid var(--main-color1);
     display: flex;
@@ -321,8 +323,9 @@ section {
 }
 
 .home-img .card img {
-    width: 85%;
-    border-radius: 5%;
+    width: 90%;
+    height: 110%;
+    border-radius: 3%;
     border-right: 2px solid var(--main-color1);
     border-bottom: 2px solid var(--main-color1);
     opacity: 0.8;
@@ -380,6 +383,7 @@ section {
 
 .about-content {
     text-align: center;
+    margin-top: 2rem;
 }
 
 .about-content h3 {
@@ -409,6 +413,7 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-top: 8rem;
 }
 
 .services-box {
@@ -701,14 +706,23 @@ section {
     }
 
     .home .container {
-        align-items: center; 
         gap: 10rem; /* Cria um espaço fixo entre o texto e a foto */
+        height: 850px;
     }
 
     /* Se a foto ainda parecer muito alta, podemos limitar o topo dela */
     .home-img {
-        margin-top: 2rem; 
+        width: 750px; /* Aumenta a largura da imagem para preencher melhor o espaço */
+        height: 100%;
     }
+
+    .home-img .card{
+        height: 100%;
+    }
+
+    /* .home-img .card img {
+        border-radius: 2rem;
+    } */
 
     /* --- Conteúdo de Texto --- */
     .home-content {
@@ -716,7 +730,7 @@ section {
     }
 
     .home-content h1 {
-        font-size: 6.5rem; /* Nome bem imponente */
+        font-size: 7.3rem; /* Nome bem imponente */
     }
 
     .home-content p {
@@ -768,20 +782,6 @@ section {
         border: .3rem solid var(--main-color1);
     }
 
-    /* --- Foto de Perfil --- */
-    .home-img {
-        width: 650px; /* Foto maior para preencher a tela */
-    }
-
-    .home-img .card {
-        height: 700px;
-        border-radius: 3rem;
-    }
-
-    .home-img .card img {
-        border-radius: 2rem;
-    }
-
     /* Ajuste do Círculo de Fundo */
     .home::before {
         clip-path: circle(35% at 105% 55%); /* Círculo um pouco maior */
@@ -810,13 +810,13 @@ section {
 
     /* Imagem e Spinner Gigantes */
     .about-img {
-        width: 50rem; 
-        height: 50rem;
+        width: 45rem; 
+        height: 45rem;
     }
 
     .about-img img {
-        width: 80%;
-        border: .5rem solid var(--main-color1);
+        width: 90%;
+        border: .3rem solid var(--main-color1);
     }
 
     .about-img .circle-spin {
@@ -829,7 +829,7 @@ section {
     /* Conteúdo Centralizado */
     .about-content {
         text-align: center;
-        max-width: 120rem; /* Limita a largura para o texto não ficar gigante horizontalmente */
+        /* max-width: 120rem; Limita a largura para o texto não ficar gigante horizontalmente */
     }
 
     /* Título da Seção (Ex: SOBRE MIM) */
@@ -859,18 +859,257 @@ section {
         font-size: 2.8rem;
         border-radius: 1.5rem;
     }
+
+    .services {
+        padding: 15rem 15% 10rem; /* Espaçamento generoso */
+    }
+
+    /* Título da seção já deve estar pegando os 8.5rem do .heading que definimos ontem */
+
+    .services-container {
+        gap: 4rem; /* Aumentamos o espaço entre os cards */
+    }
+
+    .services-box {
+        /* Aumentamos a base do flex para o card não ficar estreito */
+        flex: 2 2 55rem; 
+        padding: 6rem 4rem 8rem; /* Mais respiro interno */
+        border-radius: 4rem;
+        border: .4rem solid var(--main-bg-color); /* Borda mais grossa */
+        min-height: 640px; /* Card mais alto para preencher a tela */
+    }
+
+    .services-box i {
+        font-size: 12rem; /* Ícone bem grande e visível */
+        margin-bottom: 2rem;
+    }
+
+    .services-box h3 {
+        font-size: 4.5rem; /* Título do serviço imponente */
+        margin: 2rem 0;
+    }
+
+    .services-box p {
+        font-size: 2.6rem; /* Descrição fácil de ler à distância */
+        line-height: 1.6;
+        margin: 1rem 0 4rem;
+    }
+
+    .portfolio {
+        padding: 15rem 15% 10rem;
+    }
+
+    .portfolio-container {
+        gap: 4rem; /* Mais espaço entre os cards de projeto */
+        /* Ajustando para 3 colunas iguais e largas */
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .portfolio-box {
+        /* Aumentamos a altura de 215px para algo proporcional à largura 2K */
+        height: auto;
+        aspect-ratio: 16/10;
+        border-radius: 3rem;
+        box-shadow: 0 0 3rem var(--main-bg-color);
+    }
+
+    .portfolio-box img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover garante que a imagem preencha o espaço sem achatar */
+        object-fit: cover; 
+        transition: .5s ease;
+    }
+
+    /* Ajuste do Texto dentro do Layer (Hover) */
+    .portfolio-layer h4 {
+        font-size: 4rem; /* Título do projeto grande */
+    }
+
+    .portfolio-layer p {
+        font-size: 2rem; /* Descrição legível */
+        margin: 1rem 0 2rem;
+        /* padding: 0 2rem; */
+    }
+
+    /* Links e Ícones maiores */
+    .portfolio-links {
+        gap: 3rem;
+    }
+
+    .portfolio-links a {
+        width: 70px;
+        height: 70px;
+        font-size: 3rem;
+        border: 3px solid var(--main-color1);
+    }
+
+    .portfolio-box .portfolio-layer {
+        padding: 0 6rem; /* Mais respiro interno no hover */
+    }
+
+    .contact {
+        padding: 15rem 15% 10rem;
+    }
+
+    .contact form {
+        max-width: 120rem; /* Aumentamos a largura total do formulário */
+        margin-top: 5rem;
+    }
+
+    .contact form .input-box input,
+    .contact form textarea {
+        padding: 2.5rem;   /* Campos mais altos e espaçosos */
+        font-size: 2.5rem; /* Texto interno fácil de ler */
+        border-radius: 1.5rem;
+        margin: 1.5rem 0;  /* Mais espaçamento entre as linhas */
+        border: .2rem solid transparent;
+        transition: .3s;
+    }
+
+    /* Ajuste do foco para combinar com o estilo do site */
+    .contact form .input-box input:focus,
+    .contact form textarea:focus {
+        border-color: var(--main-color1);
+        outline: none;
+    }
+
+    .contact form textarea {
+        height: 35rem; /* Área de mensagem bem ampla */
+    }
+
+    /* Botão de Envio proporcional */
+    .contact form .btn-box.btns {
+        margin-top: 4rem;
+        height: 8rem; /* Altura padrão dos outros botões que criamos */
+    }
+
+    .contact form .btn-box.btns .btn {
+        padding: 0 8rem;
+        font-size: 2.8rem;
+        border-radius: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1350px) {
+    /* Diminuímos o tamanho da imagem para ela não bater no texto */
+    html {
+        font-size: 60%;
+    }
+
+    .home .container {
+        /* height: 90%; */
+    }
+
+    .home-img {
+        width: 400px;
+    }
+
+    .home-img .card {
+        /* width: 100%; */
+    }
+
+    .home-img .card img {
+        height: 110%;
+    }
+
+     /* Reduzimos o tamanho máximo do bloco de texto para sobrar espaço para a imagem */
+    .home-content {
+        max-width: 55rem; 
+    }
+
+    .home-content h1 {
+        font-size: 4.1rem;
+    }
 }
 
 @media (max-width: 1200px) {
-    html { font-size: 55%; }
+    html { 
+        font-size: 55%; 
+    }
+
+    .header, .home {
+        padding-left: 9%;
+        padding-right: 9%;
+        gap: 2rem; /* Cria um espaço mínimo obrigatório entre texto e foto */
+    }
+
+    /* Reduzimos o tamanho máximo do bloco de texto para sobrar espaço para a imagem */
+    .home-content {
+        max-width: 45rem; 
+    }
+
+    /* O pulo do gato: forçar a imagem a ser flexível */
+    .home-img {
+        flex: 1; /* Permite que a imagem ocupe o espaço restante */
+        display: flex;
+        justify-content: flex-end; /* Mantém a imagem encostada na direita (9%) */
+        width: 350px;
+        height: 400px;
+    }
+
+    .home-img .card {
+        width: 330px;
+        height: 100%;
+    }
+
+    .home-content h1 {
+        font-size: 3.3rem;
+    }
+
+    .home-sci {
+        left: 9%;
+    }
 }
 
 @media (max-width: 991px) {
-    .header { padding: 2rem 3%; }
+    .header, .home {
+        padding-left: 9%;
+        padding-right: 9%;
+        gap: 2rem; /* Cria um espaço mínimo obrigatório entre texto e foto */
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .home-content .text-animate h3 {
+        font-size: 1.8rem;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
+        margin-right: 2rem;
+    }
+
     section { padding: 10rem 3% 2rem; }
     .services { padding-bottom: 7rem; }
     .portfolio { padding-bottom: 7rem; }
     .contact { min-height: auto; }
+
+    /* Evita que a foto fique gigante e empurre o texto para fora */
+    .home-img {
+        width: 300px;
+    }
+
+    .about {
+        flex-direction: column; /* No 991px o "Sobre" já deve empilhar */
+        text-align: center;
+    }
+}
+
+@media (max-width: 880px) {
+    html { font-size: 50%; }
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .home-img .card {
+        width: 300px;
+        height: 100%;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -912,18 +1151,26 @@ section {
 
     /* HOME - Hierarquia e Tamanhos */
     .home {
-        padding-top: 8rem;
+        padding-top: 12rem;
         display: flex;
-        flex-direction: column !important; /* Foto -> Nome -> Descrição */
+        flex-direction: column-reverse !important; /* Foto -> Nome -> Descrição */
         align-items: center;
         text-align: center;
     }
 
+    /* Ajuste do Texto Animate para não quebrar no mobile */
+    .home-content .text-animate {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
     .home-img {
-        width: 180px !important; /* Foto menor */
+        width: 250px !important; /* Foto menor */
         height: 180px !important;
         margin-bottom: 2rem;
     }
+
     .home-img .card { height: 100%; width: 100%; }
 
     .home-content h1 {
@@ -965,9 +1212,65 @@ section {
         height: 35px !important;
         font-size: 1.8rem !important;
     }
+
+    /* MODO RETRATO: Aqui paramos de alinhar nas bordas e centralizamos */
+    .home .container {
+        flex-direction: column-reverse; /* Texto em cima, foto embaixo */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-sci {
+        position: relative; /* Sai do absolute para não flutuar sobre o texto */
+        left: 0;
+        margin: 2rem auto 0;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .home-img .card {
+        height: 300px; /* Card menor para o celular */
+        width: 300px;
+        margin-bottom: 3rem;
+    }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 530px) {
+
+}
+
+@media (max-width: 425px) {
     html { font-size: 50%; }
     .contact form .input-box input { width: 100%; }
+    .home-content h1 {
+        font-size: 3rem !important;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 320px) {
+    html { font-size: 45%; }
+    .contact form .input-box input { width: 100%; }
+    .home-content h1 {
+        font-size: 2.6rem !important;
+        line-height: 1.2;
+    }
+    .home-content .text-animate h3 {
+        font-size: 1.7rem;
+    }
+    .home-content p {
+        font-size: 1.2rem;
+    }
+
+    .about-img {
+        width: 18rem;
+        height: 18rem;
+    }
 }
