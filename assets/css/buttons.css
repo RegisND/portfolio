@@ -1,0 +1,130 @@
+/* --- BOTÕES DA HOME (CORRIGIDO) --- */
+.btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background: var(--main-color2); 
+    border: .2rem solid var(--main-color1);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--main-bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box .btn:hover {
+    color: var(--main-color1);
+}
+
+.btn-box .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .btn:hover::before {
+    width: 100%;
+}
+
+/* Botão "Fale Comigo" (Secundário) */
+.btn-box .btn:nth-child(2) {
+    background: transparent;
+    color: var(--main-color1); /* Começa Azul */
+}
+
+.btn-box .btn:nth-child(2):hover {
+    color: var(--main-bg-color); /* CORRIGIDO: Vira Escuro no Hover */
+}
+
+/* O fundo que enche no hover */
+.btn-box .btn:nth-child(2)::before {
+    background: var(--main-color2); 
+}
+
+/* --- REDES SOCIAIS --- */
+.home-sci {
+    position: absolute;
+    bottom: 6rem;
+    left: 9%;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color1);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color1);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: var(--main-color1);
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color2); 
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+/* Idioma (Mais afastado) */
+.lang-btn {
+    background: transparent;
+    border: 2px solid var(--main-color1);
+    color: var(--txt-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 4rem; 
+    transition: 0.3s;
+}
+
+.lang-btn:hover {
+    background: var(--main-color1);
+    color: var(--main-bg-color);
+    box-shadow: 0 0 10px var(--main-color1);
+}

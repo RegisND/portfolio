@@ -19,14 +19,12 @@ menuIcon.onclick = () => {
     body.classList.toggle('menu-open'); // Adiciona classe para empurrar o conteúdo
 };
 
-// Fecha o menu ao clicar em qualquer link
-document.querySelectorAll('.navbar a').forEach(link => {
-    link.onclick = () => {
-        menuIcon.classList.remove('bx-x');
-        navbar.classList.remove('active');
-        body.classList.remove('menu-open');
-    }
-});
+// Fechar o menu ao clicar em um link
+window.onscroll = () => {
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+    body.classList.remove('menu-open');
+};
 
 /* =========================================
    SISTEMA DE TRADUÇÃO (PT <-> EN)

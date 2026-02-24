@@ -1,0 +1,36 @@
+#sobre, #projetos {
+    background: var(--second-bg-color);
+}
+
+body {
+    background: var(--main-bg-color);
+    color: var(--txt-color);
+}
+
+body.bg-dark {
+    background: var(--main-bg-color);
+}
+
+body.bg-light {
+    background: var(--second-bg-color);
+}
+
+section {
+    /* min-height: 100vh; */
+    flex: 1;
+    padding: 8rem 9% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* --- TÍTULOS GLOBAIS --- */
+.heading {
+    font-size: 4rem; 
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.heading span {
+    color: var(--main-color1);
+}

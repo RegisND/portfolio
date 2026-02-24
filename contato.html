@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Portfólio Reginaldo Dias</title>
+    <link rel="stylesheet" href="assets/css/main-color1.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/sections/home.css">
+    <link rel="stylesheet" href="assets/css/sections/about.css">
+    <link rel="stylesheet" href="assets/css/sections/services.css">
+    <link rel="stylesheet" href="assets/css/sections/portfolio.css">
+    <link rel="stylesheet" href="assets/css/sections/contact.css">
+    <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="bg-dark">
+    <header class="header">
+        <a href="index.html" class="logo">RegisND</a>
+
+        <nav class="navbar">
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="habilidades.html">Habilidades</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="contato.html" class="active">Contato</a>
+            <button id="lang-switch" class="lang-btn">🇺🇸 EN</button>
+        </nav>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+    <main>
+        <section id="contact" class="contact">
+            <h2 class="heading" data-lang="contact_heading">Fale <span>Comigo!</span></h2>
+            <form id="contactForm">
+                <div class="input-box">
+                    <input type="text" name="nome" placeholder="Nome Completo" data-lang-ph="ph_name">
+                    <input type="email" name="email" placeholder="Email" data-lang-ph="ph_email">
+                </div>
+                <div class="input-box">
+                    <input type="number" name="telefone" placeholder="Telefone" data-lang-ph="ph_phone">
+                    <input type="text" name="assunto" placeholder="Assunto" data-lang-ph="ph_subject">
+                </div>
+                <textarea name="mensagem" cols="30" rows="10" placeholder="Sua Mensagem"
+                    data-lang-ph="ph_msg"></textarea>
+                <div class="btn-box btns">
+                    <button type="submit" class="btn" data-lang="btn_send">Enviar Mensagem</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Reginaldo Dias. Todos os direitos reservados.</p>
+    </footer>
+    <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/mensagem.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+:root {
+    --main-color1: rgba(0, 171, 240);
+    --main-color2: rgba(0, 171, 240, 0.4);
+    --main-color3: rgba(0, 171, 240, 0.05);
+
+    --main-bg-color: rgb(22, 22, 35);
+    --second-bg-color: rgb(17, 46, 66);
+    --txt-color: rgb(237, 237, 237);
+}

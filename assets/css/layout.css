@@ -1,0 +1,116 @@
+/* --- LAYOUT GLOBAL --- */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo ocupe a tela toda */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER --- */
+.header {
+    height: 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 9%;
+    background: var(--main-color3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--main-color1);
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+    transition: .7s;
+}
+
+.header:hover::before {
+    left: 100%;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--txt-color);
+    font-weight: 600;
+    cursor: default;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    color: var(--main-color1);
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--txt-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color1);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--txt-color);
+    cursor: pointer;
+    display: none; /* Escondido por padrão no desktop */
+    z-index: 1001; /* Acima do navbar mobile */
+}
+
+footer {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Efeito Glassmorphism igual ao Header */
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--main-color1);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+    transition: .7s;
+}
+
+footer:hover::before {
+    left: 100%;
+}
+
+footer p {
+    font-size: 1.2rem;
+    color: var(--txt-color);
+    /* opacity: 0.7; */
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}

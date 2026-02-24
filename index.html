@@ -1,208 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfólio Website HTML CSS Only</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/skins/main-color1.css">
+    <title>Home | Personal Portfólio</title>
+    <link rel="stylesheet" href="assets/css/main-color1.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/sections/home.css">
+    <link rel="stylesheet" href="assets/css/sections/about.css">
+    <link rel="stylesheet" href="assets/css/sections/services.css">
+    <link rel="stylesheet" href="assets/css/sections/portfolio.css">
+    <link rel="stylesheet" href="assets/css/sections/contact.css">
+    <link rel="stylesheet" href="assets/css/buttons.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
+
+<body class="bg-dark">
     <header class="header">
-        <a href="#" class="logo">RegisND</a>
-        
+        <a href="index.html" class="logo">RegisND</a>
+
         <nav class="navbar">
-            <a href="#home" class="active" data-lang="nav_home">Início</a>
-            <a href="#about" data-lang="nav_about">Sobre</a>
-            <a href="#services" data-lang="nav_services">Serviços</a>
-            <a href="#portfolio" data-lang="nav_portfolio">Projetos</a>
-            <a href="#contact" data-lang="nav_contact">Contato</a>
+            <a href="index.html" class="active">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="habilidades.html">Habilidades</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="contato.html">Contato</a>
             <button id="lang-switch" class="lang-btn">🇺🇸 EN</button>
         </nav>
-        
+
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
-    <section id="home" class="home">
-        <div class="container">
-            <div class="home-content">
-                <h1 data-lang="hero_title">Olá, eu sou <span>Reginaldo Dias</span></h1>
-                <div class="text-animate">
-                    <h3>Suporte Técnico | Automação</h3>
+    <main>
+        <section id="home" class="home">
+            <div class="container">
+                <div class="home-content">
+                    <h1>Olá, eu sou <span>Reginaldo Dias</span></h1>
+                    <div class="text-animate">
+                        <h3>Suporte Técnico | Automação</h3>
+                    </div>
+                    <p>Oficial Administrativo em transição para a área técnica. Aplico Python, IA e Automação para
+                        otimizar
+                        fluxos de trabalho e gestão de dados.</p>
+                    <div class="btn-box">
+                        <a href="curriculo.html" target="_blank" class="btn">Currículo</a>
+                        <a href="contato.html" class="btn">Fale Comigo</a>
+                    </div>
                 </div>
-                <p data-lang="hero_desc">Oficial Administrativo em transição para a área técnica. Aplico Python, IA e Automação para otimizar fluxos de trabalho e gestão de dados.</p>
-                <div class="btn-box">
-                    <a href="curriculo.html" target="_blank" class="btn" data-lang="btn_cv">Currículo</a>
-                    <a href="#contact" class="btn" data-lang="btn_talk">Fale Comigo</a>
-                </div>
-            </div>
-            
-            <div class="home-img">
-                <div class="card">
-                    <img src="./assets/images/reginaldo.png" alt="Foto de Perfil">
-                </div>
-            </div>
-        </div>
-        
-        <div class="home-sci">
-            <a href="https://www.linkedin.com/in/reginaldo-neves-dias-00ba43249/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/RegisND" target="_blank"><i class='bx bxl-github' ></i></a>
-            <a href="https://wa.me/5511994867514?text=Olá,%20Reginaldo!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank"><i class='bx bxl-whatsapp' ></i></a>
-        </div>
-    </section>
 
-    <section id="about" class="about">
-        <h2 class="heading" data-lang="about_heading">Sobre <span>Mim</span></h2>
-        <div class="about-img">
-            <img src="./assets/images/regis.png" alt="">
-            <span class="circle-spin"></span>
-        </div>
-        <div class="about-content">
-            <h3 data-lang="about_sub">Desenvolvedor & Automatizador</h3>
-            <p data-lang="about_text">Atualmente no 4º semestre de ADS, utilizo minha experiência em processos públicos para desenvolver ferramentas que automatizam tarefas repetitivas e aumentam a precisão na análise de dados.</p>
-            <div class="btn-box btns">
-                <a href="#portfolio" class="btn" data-lang="btn_projects">Ver Projetos</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <h2 class="heading" data-lang="services_heading">Meus <span>Serviços</span></h2>
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3 data-lang="serv_1_title">Desenvolvimento Web</h3>
-                <p data-lang="serv_1_desc">Sites responsivos, landing pages e aplicações web usando HTML, CSS, JS e frameworks modernos.</p>
-            </div>
-            <div class="services-box">
-                <i class='bx bx-cog'></i>
-                <h3 data-lang="serv_2_title">Automação de Processos</h3>
-                <p data-lang="serv_2_desc">Scripts Python para web scraping, leitura de PDFs e automação de tarefas repetitivas.</p>
-            </div>
-            <div class="services-box">
-                <i class='bx bxs-data'></i>
-                <h3 data-lang="serv_3_title">Integração de Sistemas</h3>
-                <p data-lang="serv_3_desc">Conexão entre APIs, Bancos de Dados (SQL) e planilhas para unificar informações.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <h2 class="heading" data-lang="portfolio_heading">Meus <span>Projetos</span></h2>
-        <div class="portfolio-container">
-            
-            <div class="portfolio-box">
-                <img src="./assets/images/bot-invest.gif" alt="Bot Investimentos">
-                <div class="portfolio-layer">
-                    <h4>Bot de Investimentos</h4>
-                    <p data-lang="proj_1_desc">Automação Python com Selenium que monitora carteira de ativos (FIIs/Ações) e gera relatórios em Excel.</p>
-                    
-                    <div class="portfolio-links">
-                        <a href="https://github.com/regisnd/bot-investimentos-python" target="_blank">
-                            <i class='bx bxl-github'></i>
-                        </a>
+                <div class="home-img">
+                    <div class="card">
+                        <img src="./assets/images/reginaldo.png" alt="Foto de Perfil">
                     </div>
                 </div>
             </div>
 
-            <div class="portfolio-box">
-                <img src="./assets/images/projeto2.jpg" alt="Musashi App">
-                <div class="portfolio-layer">
-                    <h4>Musashi Training</h4>
-                    <p data-lang="proj_2_desc">App Fullstack (C# + JS) para gestão de treinos gamificados.</p>
-                    
-                    <div class="portfolio-links">
-                        <a href="https://regisnd.github.io/musashi-training/" target="_blank" title="Em Desenvolvimento">
-                            <i class='bx bx-link-external'></i>
-                        </a>
-                        
-                        <a href="https://github.com/RegisND/musashi-training" target="_blank">
-                            <i class='bx bxl-github'></i>
-                        </a>
-                    </div>
-                </div>
+            <div class="home-sci">
+                <a href="https://www.linkedin.com/in/reginaldo-neves-dias-00ba43249/" target="_blank"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/RegisND" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://wa.me/5511994867514" target="_blank"><i class='bx bxl-whatsapp'></i></a>
             </div>
-
-            <div class="portfolio-box">
-                <img src="./assets/images/projeto3.jpg" alt="Portfolio">
-                <div class="portfolio-layer">
-                    <h4>Personal Portfolio</h4>
-                    <p data-lang="proj_3_desc">Site responsivo com Glassmorphism e animações CSS.</p>
-                    
-                    <div class="portfolio-links">
-                        <a href="https://regisnd.github.io/portfolio/" target="_blank"><i class='bx bx-link-external'></i></a>
-                        <a href="https://github.com/RegisND/portfolio" target="_blank"><i class='bx bxl-github'></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="./assets/images/projeto4.jpg" alt="File Manager">
-                <div class="portfolio-layer">
-                    <h4>PDF Organizer</h4>
-                    <p data-lang="proj_4_desc">Script para renomear e organizar milhares de arquivos automaticamente.</p>
-                    
-                    <div class="portfolio-links">
-                        <a href="#" target="_blank"><i class='bx bx-link-external'></i></a>
-                        <a href="#" target="_blank"><i class='bx bxl-github'></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="./assets/images/projeto5.jpg" alt="Excel VBA">
-                <div class="portfolio-layer">
-                    <h4>Macro Validator</h4>
-                    <p data-lang="proj_5_desc">Sistema em VBA para correção e validação de base de dados.</p>
-                    
-                    <div class="portfolio-links">
-                        <a href="#" target="_blank"><i class='bx bx-link-external'></i></a>
-                        <a href="#" target="_blank"><i class='bx bxl-github'></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="./assets/images/projeto6.jpg" alt="Movie App">
-                <div class="portfolio-layer">
-                    <h4>Movie Explorer 2.0</h4>
-                    <p data-lang="proj_6_desc">Aplicação Web responsiva consumindo a API do TMDB com Dark Mode e Glassmorphism.</p>
-                    
-                    <div class="portfolio-links">
-                        <a href="https://regisnd.github.io/movie-explorer-js/" target="_blank" title="Ver Site Online">
-                            <i class='bx bx-link-external'></i>
-                        </a>
-                        <a href="https://github.com/regisnd/movie-explorer-js" target="_blank" title="Ver Código">
-                            <i class='bx bxl-github'></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2 class="heading" data-lang="contact_heading">Fale <span>Comigo!</span></h2>
-        <form id="contactForm">
-            <div class="input-box">
-                <input type="text" name="nome" placeholder="Nome Completo" data-lang-ph="ph_name">
-                <input type="email" name="email" placeholder="Email" data-lang-ph="ph_email">
-            </div>
-            <div class="input-box">
-                <input type="number" name="telefone" placeholder="Telefone" data-lang-ph="ph_phone">
-                <input type="text" name="assunto" placeholder="Assunto" data-lang-ph="ph_subject">
-            </div>
-            <textarea name="mensagem" cols="30" rows="10" placeholder="Sua Mensagem" data-lang-ph="ph_msg"></textarea>
-            <div class="btn-box btns">
-                <button type="submit" class="btn" data-lang="btn_send">Enviar Mensagem</button>
-            </div>
-        </form>
-    </section>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Reginaldo Dias. Todos os direitos reservados.</p>
+    </footer>
 
     <script type="text/javascript" src="./assets/js/vanilla-tilt.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/mensagem.js"></script>
 </body>
+
 </html>
